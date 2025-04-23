@@ -1,60 +1,106 @@
-**Objetivo:**
-- Criar uma página com elementos utilizando Bootstrap.
+# 📄 Relato de Desenvolvimento – Tarefa Bootstrap - Módulo 13 FrontEnd
 
-**Requisitos da página:**
-1. **Carrossel de imagens:**
-   - Um carrossel exibindo várias imagens sequenciais.
+## 🎯 Objetivo da Tarefa
 
-2. **Layout com grid responsivo:**
-   - **Desktop:** 3 itens por linha.
-   - **Tablet:** 2 itens por linha.
-   - **Smartphone:** 1 item por linha.
+Criar uma página responsiva utilizando **Bootstrap**, com elementos modernos como **navbar fixa**, **carrossel**, **cards promocionais** e uma seção de **contato com formulário interativo**, aplicando os conceitos aprendidos de grid, layout responsivo e interatividade com JavaScript.
 
-3. **Cards nas colunas:**
-   - Cada coluna conterá um card.
-   - O design e conteúdo dos cards podem ser personalizados.
+---
 
-**Entrega:**
-- Publicar o projeto na Vercel.
-- Enviar o link através da plataforma da EBAQ.
+## ✅ Resultado Final
 
-**Planejamento e proposta de projeto:**
-- Usar a tarefa para trabalhar em um protótipo de remodelação do site da agência de viagens.
-- Manter o menu com o botão de login (não funcional neste momento).
-- Substituir o layout atual por:
-  - Um carrossel com imagens de paisagens.
-  - Cards exibindo promoções.
-  - Uma seção de contato na parte inferior da página.
+A página do site fictício **Mabi Viagens** foi estruturada com os seguintes elementos:
 
-**Configuração do Navbar:**
-- Testando uma abordagem com:
-  - **Logo:** Alinhada à esquerda.
-  - **Itens do menu:** Centralizados.
-  - **Botão de login:** Alinhado à direita.
-- Considerando diferentes modelos:
-  - Modelo **Notion:** Logo e itens do menu à esquerda, botões (login, cadastro, contato) à direita.
-  - Modelo **Apple:** Menu centralizado, com logo, seções e botões juntos.
-- Optando pelo menu centralizado, mas ajustando o design para poucas seções.
+---
 
-**Estilização do botão:**
-- Tornando o botão mais arredondado.
-- Adicionando maior padding.
-- Aumentando o tamanho da fonte.
+### 🛍️ Navegação e Cabeçalho
 
-**Próximos passos:**
-- Finalizar o layout do navbar.
-- Ajustar o design e a responsividade para cada tamanho de tela.
-- Adicionar o carrossel, grid e cards conforme os requisitos.
-- Publicar no Vercel e enviar o link para avaliação.
+- **Header fixo** com `position: sticky`, `z-index: 1020` e fundo para manter visibilidade durante a rolagem.
+- Estrutura responsiva com a classe `.menu-btn`:
+  - **Mobile**: logo centralizada no topo; abaixo, menu e botão **Login** lado a lado e centralizados.
+  - **Desktop**: layout adaptado em relação ao original. A logo continua à esquerda, enquanto o menu e o botão de login estão agrupados à direita. A mudança foi adotada por praticidade e para manter a responsividade.
+- Estilização do botão de login:
+  - Fonte maior
+  - Padding aumentado
+  - Responsivo com ajuste de tamanho em telas pequenas
 
-**Comentários adicionais:**
-- Estou testando diferentes abordagens para a disposição do menu e do botão de login.
-- Considerando aumentar o tamanho da fonte dos itens do menu para melhorar a visualização.
-- Ainda ajustando a estrutura do navbar para encontrar o layout mais adequado para as poucas seções disponíveis.
+---
 
-**Atualizações na construção do menu:**
-- Finalizada a versão desktop.
-- Aumentado o tamanho da fonte dos elementos do menu.
-- Tamanho da logo ajustado.
-- Adicionadas margens negativas à logo e ao botão de login para alinhar visualmente com o menu.
-- Próximo passo: verificar e ajustar as versões responsivas (tablet e celular).
+### 🖼️ Carrossel de Imagens
+
+- `carousel-fade` com transições suaves.
+- Três slides dentro de um `carousel-inner`, com `height: 600px` e `object-fit: cover`.
+- Legendas com `text-shadow` para contraste:
+  - "Paisagens Brasileiras"
+  - "Melhores Ofertas"
+  - "Momentos Únicos"
+
+---
+
+### 🧱 Seção de Promoções (Cards)
+
+- Estrutura em grid com responsividade:
+  - `col-12` (mobile), `col-sm-6` (tablet), `col-lg-4` (desktop)
+- Cada card inclui imagem, título, subtítulo, texto e botão de ação.
+- Layout interno com `d-flex justify-content-between align-items-center` para o preço e o botão.
+- Imagens padronizadas:
+  ```css
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  ```
+
+---
+
+### 📩 Seção de Contato
+
+- Título com `text-center` no mobile e `text-lg-start` no desktop.
+- Parágrafos orientativos sobre envio de informações.
+- Contato com ícones:
+  - E-mail com `bi bi-envelope`
+  - Telefone com `bi bi-telephone`
+- Itens alinhados com `d-flex`, `gap-2` e `align-items-center`.
+- Estilização responsiva com alinhamento central no mobile.
+
+---
+
+### 📝 Formulário
+
+- Campos obrigatórios (`required`):
+  - Nome Completo (`type="text"`)
+  - E-mail (`type="email"`)
+  - Telefone (`type="text"`)
+- Aplicadas classes `form-control`, com espaçamento entre elementos (`mb-3`).
+- Botão "Enviar" com:
+  - `btn-success`
+  - `rounded-pill`
+  - `mx-auto d-block`
+
+---
+
+### 💻 Funcionalidade JavaScript
+
+- Uso do **jQuery** e **jQuery Mask Plugin**.
+- Máscara aplicada ao campo telefone: `(00) 00000-0000`.
+- Envio do formulário:
+  - Impede o recarregamento com `event.preventDefault()`
+  - Limpa os campos com `this.reset()`
+
+---
+
+### 🎨 Estética e Responsividade
+
+- Uso de classes utilitárias: `d-flex`, `gap`, `flex-column`, `text-lg-start`, entre outras.
+- `#form-contato` com largura máxima de `350px` e centralizado.
+- Seções com `scroll-margin-top: 200px` para evitar que o header sobreponha o conteúdo ao clicar nos links de ancoragem.
+- Cards e carrossel ajustados em telas pequenas com `max-width: 80%`.
+
+---
+
+## 📚 Aprendizados e Considerações
+
+- Prática com sistema de grid e responsividade do Bootstrap.
+- Alinhamento prático com `d-flex` e classes utilitárias.
+- Adaptação visual para dispositivos diferentes.
+- Mudança no layout desktop feita conscientemente, priorizando a finalização da entrega.

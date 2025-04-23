@@ -8,34 +8,33 @@
     <link rel="stylesheet" href="lib/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="src/logo_mabi.png" type="image/x-icon">
 </head>
 
 <body>
     <header id="cabecalho" class="mb-5">
-        <div class="navbar navbar-expand-lg">
+        <div class="navbar">
             <div class="container justify-content-between align-items-center">
                 <img id="logo" src="src/logo_mabi.png"
                     alt="Planeta com algumas pessoas e uma mala por cima, com a escrita Mabi Viagens, passagens áreas">
-                <nav id="menu">
-                    <ul class="nav navbar-nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Inicio
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Promoções
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Contato
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="btn btn-primary" id="btn_login" type="button">Login</button>
+                <div
+                    class="menu-btn d-flex justify-content-center align-items-center gap-3 mt-3 mt-lg-0">
+                    <nav id="menu">
+                        <ul class="nav navbar-nav nav-pills flex-row gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#promocoes">Promoções</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contato">Contato</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="btn btn-primary" id="btn_login" type="button">Login</button>
+                </div>
+
             </div>
         </div>
     </header>
@@ -197,11 +196,11 @@
     </section>
 
     <section id="contato" class="mb-5 mt-3">
-        <div class="container">
-            <div class="row gx-4">
-                <div class="col-12 col-lg-6">
-                    <h2 class="d-block text-start">Contato</h2>
-                    <div class="texto-contato">
+        <div class="container px-3">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start gap-5">
+                <div class="flex-grow-1">
+                    <h2 class="d-block text-center text-lg-start">Contato</h2>
+                    <div class="texto-contato text-lg-start text-center">
                         <p>
                             Para ajudar você a encontrar as melhores opções de passagens, precisamos saber algumas
                             informações: de onde você quer sair, para onde pretende ir e quais são as datas disponíveis
@@ -209,24 +208,26 @@
                         </p>
                         <p>
                             Se já tiver um destino definido, ótimo! Mas, se ainda estiver em dúvida, podemos sugerir
-                            lugaresque combinem com o seu estilo — como praia, serra ou cidade.</p>
+                            lugares que combinem com o seu estilo — como praia, serra ou cidade.</p>
                         <p>
                             Sugerimos também que você pesquise os preços com antecedência. Isso ajuda a entender melhor
                             o que é um bom valor e evita surpresas na hora de decidir.
                         </p>
-                        <div class="d-flex gap-2">
-                            <i class="bi bi-envelope"></i>
-                            <p>contato@mabiviagens.com.br</p>
+                        <div
+                            class="d-flex justify-content-center justify-content-md-start align-items-center gap-2  mb-2">
+                            <i class="bi bi-envelope fs-5"></i>
+                            <p class="m">contato@mabiviagens.com.br</p>
                         </div>
-                        <div class="d-flex gap-2">
-                            <i class="bi bi-telephone"></i>
-                            <p>(85)9.9264-9377</p>
+                        <div
+                            class="d-flex justify-content-center justify-content-md-start align-items-center gap-2  mb-2">
+                            <i class="bi bi-telephone fs-5"></i>
+                            <p class="m">(85)9.9264-9377</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 align-self-start mx-auto">
+                <div class="flex-grow-1">
                     <form id="form-contato">
-                        <div class="mt-5 mb-3">
+                        <div class="mt-lg-5 mb-3">
                             <label class="form-label" for="nome">Nome Completo</label>
                             <input class="form-control" id="nome" type="text" name="" required>
 

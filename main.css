@@ -2,6 +2,14 @@ body {
     background-color: #e8f1fa;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #e8f1fa;
+    z-index: 1020;
+}
+
 #cabecalho {
     border-bottom: 2px solid #ccc;
 }
@@ -38,6 +46,10 @@ body {
     color: #fff;
 }
 
+section {
+    scroll-margin-top: 200px;
+}
+
 #promocoes h2,
 #contato h2 {
     font-size: 3rem;
@@ -54,16 +66,54 @@ body {
 }
 
 .texto-contato {
-    width: 520px;
+    max-width: 520px;
     text-align: start;
+}
+
+.m {
+    margin-top: 12px;
 }
 
 #form-contato {
     max-width: 350px;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
 }
 
 footer {
     border-top: 2px solid #ccc;
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 200px;
+        
+    }
+
+    .menu-btn {
+        margin: 0 auto;
+    }
+
+    .menu-btn a {
+        font-size: 1.2rem;
+    }
+
+    #btn_login {
+        font-size: 1.2rem;
+        padding: 4px 8px;
+    }
+
+    #logo {
+        height: 180px;
+        margin: -30px auto;
+    }
+
+    .card, #carousel-inicio {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    #carousel-inicio {
+        max-width: 80%;
+    }
 }
