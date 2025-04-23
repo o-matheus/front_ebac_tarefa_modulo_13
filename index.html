@@ -6,59 +6,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mabi Viagens</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <header class="cabecalho">
+    <header id="cabecalho" class="mb-5">
         <div class="navbar navbar-expand-lg">
             <div class="container justify-content-between align-items-center">
-                    <img id="logo" src="src/logo_mabi.png"
-                        alt="Planeta com algumas pessoas e uma mala por cima, com a escrita Mabi Viagens, passagens áreas">
-                    <nav id="menu">
-                        <ul class="nav navbar-nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Inicio
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Promoções
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Contato
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                <img id="logo" src="src/logo_mabi.png"
+                    alt="Planeta com algumas pessoas e uma mala por cima, com a escrita Mabi Viagens, passagens áreas">
+                <nav id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Promoções
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
                 <button class="btn btn-primary" id="btn_login" type="button">Login</button>
             </div>
         </div>
     </header>
-    <div class="container">
-        <div id="carousel-inicio" class="carousel carousel-fade slide" data-bs-target="carousel">
+    <div class="container justify-content-center mb-5">
+        <div id="carousel-inicio" class="carousel carousel-fade slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carosel-item active">
-                    <img class="carousel_img h-50" src="https://cdn.pixabay.com/photo/2023/09/05/16/40/sunrise-8235464_1280.jpg" alt="praia">
+                <div class="carousel-item active">
+                    <img class="carousel_img"
+                        src="https://images.pexels.com/photos/27688574/pexels-photo-27688574/free-photo-of-panorama-vista-paisagem-natureza.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        alt="Maranhão">
+                    <div class="carousel-caption ">
+                        <h3 class="legenda-carousel ">Paisagens Brasileiras</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel_img"
+                        src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Rio">
+                    <div class="carousel-caption ">
+                        <h3 class="legenda-carousel ">Melhores Ofertas</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="carousel_img"
+                        src="https://b3577058.smushcdn.com/3577058/wp-content/uploads/2023/04/centro-historico-recife-3-1.jpg?lossy=1&strip=0&webp=1"
+                        alt="Recife">
+                    <div class="carousel-caption ">
+                        <h3 class="legenda-carousel ">Momentos Únicos</h3>
+                    </div>
                 </div>
             </div>
-            <div class="carousel-inner">
-                <div class="carosel-item">
-                    <img class="carousel_img" src="https://cdn.pixabay.com/photo/2023/09/05/16/40/sunrise-8235464_1280.jpg" alt="praia">
-                </div>
-            </div>
-            <div class="carousel-inner">
-                <div class="carosel-item">
-                    <img class="carousel_img" src="https://cdn.pixabay.com/photo/2023/09/05/16/40/sunrise-8235464_1280.jpg" alt="praia">
-                </div>
+            <button data-bs-target="#carousel-inicio" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button data-bs-target="#carousel-inicio" data-bs-slide="next" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-inicio" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-inicio" class="active" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-inicio" class="active" data-bs-slide-to="2"></button>
             </div>
         </div>
     </div>
 
+    <section id="promocoes" class="mb-5">
+        <div class="container">
+            <h2 class="d-block text-center mb-4">Promoções</h2>
+            <div class="row gx-4 gy-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.LYR2OU17yvrcY6gfyVrE_wHaF7&w=379&h=379&c=7" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Fortaleza - Curitiba</h4>
+                            <h5 class="card-subtitle mb-1">Passagem área - Fevereiro</h5>
+                            <p class="card-text">
+                                Curitiba encanta com sua organização, áreas verdes, arquitetura moderna, cultura
+                                vibrante e espaços marcantes como o Jardim Botânico.
+                            </p>
+                            <div class="Oferta d-flex justify-content-between align-items-center">
+                                <p class="valor pt-3">R$900,00</p>
+                                <a href="#" class="btn btn-primary">Ver oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://b3577058.smushcdn.com/3577058/wp-content/uploads/2023/04/centro-historico-recife-3-1.jpg?lossy=1&strip=0&webp=1"
+                            alt="Recife">
+                        <div class="card-body">
+                            <h4 class="card-title">Fortaleza - Recife</h4>
+                            <h5 class="card-subtitle mb-1">Passagem área - Outubro</h5>
+                            <p class="card-text">
+                                Recife mistura história e modernidade, com praias encantadoras, cultura vibrante,
+                                culinária marcante e um povo acolhedor e cheio de vida.
+                            </p>
+                            <div class="Oferta d-flex justify-content-between align-items-center">
+                                <p class="valor pt-3">R$450,00</p>
+                                <a href="#" class="btn btn-primary">Ver oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://images.pexels.com/photos/27688574/pexels-photo-27688574/free-photo-of-panorama-vista-paisagem-natureza.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                            alt="Maranhão">
+                        <div class="card-body">
+                            <h4 class="card-title">Fortaleza - Maranhão</h4>
+                            <h5 class="card-subtitle mb-1">Passagem área - Janeiro</h5>
+                            <p class="card-text">
+                                O Maranhão surpreende com suas dunas, lagoas cristalinas, rica cultura popular,
+                                culinária única e paisagens que emocionam a cada olhar.
+                            </p>
+                            <div class="Oferta d-flex justify-content-between align-items-center">
+                                <p class="valor pt-3">R$600,00</p>
+                                <a href="#" class="btn btn-primary">Ver oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?q=80&w=2126&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Fortaleza - Rio de Janeiro</h4>
+                            <h5 class="card-subtitle mb-1">Passagem área - Julho</h5>
+                            <p class="card-text">
+                                O Rio de Janeiro encanta com praias douradas, montanhas imponentes, cultura vibrante,
+                                povo caloroso e cenários que parecem pinturas vivas.
+                            </p>
+                            <div class="Oferta d-flex justify-content-between align-items-center">
+                                <p class="valor pt-3">R$800,00</p>
+                                <a href="#" class="btn btn-primary">Ver oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.Xof1O1f_bRyBJ2m3kefHPQHaE8&w=316&h=316&c=7" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Fortaleza - Belo Horizonte</h4>
+                            <h5 class="card-subtitle mb-1">Passagem área - Fevereiro</h5>
+                            <p class="card-text">
+                                Belo Horizonte surpreende com cultura rica, culinária irresistível, arquitetura marcante
+                                e praças encantadoras como a charmosa Praça da Liberdade.
+                            </p>
+                            <div class="Oferta d-flex justify-content-between align-items-center">
+                                <p class="valor pt-3">R$750,00</p>
+                                <a href="#" class="btn btn-primary">Ver oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.JdSxpAoeOwL_gGb8F3YCngHaFj&w=355&h=355&c=7" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Fortaleza - São Paulo</h4>
+                            <h5 class="card-subtitle mb-1">Passagem área - Fevereiro</h5>
+                            <p class="card-text">
+                                São Paulo pulsa com cultura, gastronomia, arte e diversidade. Uma metrópole vibrante que
+                                nunca dorme e sempre surpreende.
+                            </p>
+                            <div class="Oferta d-flex justify-content-between align-items-center">
+                                <p class="valor pt-3">R$700,00</p>
+                                <a href="#" class="btn btn-primary">Ver oferta</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="mb-5 mt-3">
+        <div class="container">
+            <div class="row gx-4">
+                <div class="col-12 col-lg-6">
+                    <h2 class="d-block text-start">Contato</h2>
+                    <div class="texto-contato">
+                        <p>
+                            Para ajudar você a encontrar as melhores opções de passagens, precisamos saber algumas
+                            informações: de onde você quer sair, para onde pretende ir e quais são as datas disponíveis
+                            para
+                            a viagem.
+                            Se já tiver um destino definido, ótimo! Mas, se ainda estiver em dúvida, podemos sugerir
+                            lugares
+                            que combinem com o seu estilo — como praia, serra ou cidade.
+                            Sugerimos também que você pesquise os preços com antecedência. Isso ajuda a entender melhor
+                            o
+                            que é um bom valor e evita surpresas na hora de decidir.
+                        </p>
+                        <div class="d-flex gap-2">
+                            <i class="bi bi-envelope"></i>
+                            <p>contato@mabiviagens.com.br</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <i class="bi bi-telephone"></i>
+                            <p>(85)9.9264-9377</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 align-self-start mx-auto">
+                    <form id="form-contato">
+                        <div class="mt-5 mb-3">
+                            <label class="form-label" for="nome">Nome Completo</label>
+                            <input class="form-control" id="nome" type="text" name="" required>
+
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">E-mail</label>
+                            <input class="form-control" id="email" type="email" name="" required>
+
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="telefone">Telefone</label>
+                            <input class="form-control" id="telefone" type="text" name="" required>
+
+                        </div>
+
+                        <button class="btn btn-success mt-4 px-4 py-2 rounded-pill mx-auto d-block"
+                            type="submit">Enviar</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center mt-3">
+        © 2025 Mabi Viagens. Todos os direitos reservados.
+    </footer>
+
     <script src="lib/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>
